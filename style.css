@@ -1,3 +1,6 @@
+/* Existing styles */
+
+/* Body and container styles */
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +9,6 @@ body {
     color: #fff;
 }
 
-/* Conteneur principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -108,4 +110,56 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Adjusts header and navigation for smaller screens */
+    nav ul {
+        flex-direction: column;
+        /* Stack the menu vertically */
+        gap: 10px;
+        /* Reduce gap between items */
+    }
+
+    /* Reduce font size for hero text */
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+    }
+
+    /* Adjust the hero section height for smaller screens */
+    .hero {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For very small devices */
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Further reduce font sizes */
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        padding: 8px 16px;
+    }
 }
