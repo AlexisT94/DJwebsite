@@ -1,6 +1,4 @@
-/* Existing styles */
-
-/* Body and container styles */
+/* Styles de base */
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +7,7 @@ body {
     color: #fff;
 }
 
+/* Conteneur principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -48,13 +47,15 @@ nav ul li a:hover {
 
 /* Section Hero */
 .hero {
-    height: 90vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: url('images/home_pic.jpg') center/cover no-repeat;
     position: relative;
+    padding: 0 20px; /* Ensure some padding for smaller screens */
+    height: 90vh; /* Adjust height for large screens */
 }
 
 .hero::before {
@@ -64,7 +65,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
 }
 
 .hero-content {
@@ -112,54 +113,59 @@ footer p {
     margin: 0;
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Tablet (768px or less) */
 @media (max-width: 768px) {
-
-    /* Adjusts header and navigation for smaller screens */
-    nav ul {
-        flex-direction: column;
-        /* Stack the menu vertically */
-        gap: 10px;
-        /* Reduce gap between items */
+    header {
+        padding: 10px;
     }
 
-    /* Reduce font size for hero text */
+    nav ul {
+        flex-direction: column; /* Stack the menu vertically on smaller screens */
+        gap: 10px;
+    }
+
+    /* Adjust hero section height and content */
+    .hero {
+        height: 70vh; /* Reduce height for smaller screens */
+        padding: 0 10px;
+    }
+
     .hero h2 {
-        font-size: 30px;
+        font-size: 30px; /* Reduce font size */
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .cta-btn {
-        padding: 10px 20px;
-    }
-
-    /* Adjust the hero section height for smaller screens */
-    .hero {
-        height: 70vh;
+        padding: 10px 20px; /* Reduce button size */
     }
 }
 
+/* Responsive Styles for Mobile (480px or less) */
 @media (max-width: 480px) {
-
-    /* For very small devices */
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Keep stacking the menu */
         gap: 5px;
     }
 
-    /* Further reduce font sizes */
+    /* Further adjust hero section and button for mobile */
+    .hero {
+        height: auto; /* Let height adjust based on content */
+        padding: 0 10px;
+    }
+
     .hero h2 {
-        font-size: 24px;
+        font-size: 24px; /* Smaller heading for mobile */
     }
 
     .hero p {
-        font-size: 14px;
+        font-size: 14px; /* Smaller paragraph */
     }
 
     .cta-btn {
-        padding: 8px 16px;
+        padding: 8px 16px; /* Smaller button padding */
+        font-size: 14px;
     }
 }
